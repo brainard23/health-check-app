@@ -1,4 +1,4 @@
-# Design spec — Owner Health Check
+# Design spec — Business Health Check
 
 Derived from the ui-ux-pro-max rule set (accessibility → touch → layout → type/color → motion).
 Style: **calm minimal wellness** — soft neutral canvas, one white card, one teal accent.
@@ -30,7 +30,7 @@ Dark mode via `prefers-color-scheme`. Font: **Plus Jakarta Sans** via `next/font
 
 ## Screens
 
-**Intro** — small eyebrow "Health Check · Area 1", h1 "How healthy are your habits?",
+**Intro** — small eyebrow "Business Health Check · Area 1", h1 "How healthy is your business?",
 one-line subtitle ("10 quick yes/no questions. Takes about a minute."), single primary
 CTA "Start the check" (only one primary action per screen).
 

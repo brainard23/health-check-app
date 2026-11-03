@@ -21,17 +21,17 @@ describe("buildReport", () => {
 
   it("lists only No answers, in question order, with impact text", () => {
     const r = buildReport(questions, {
-      support: "no",
-      sleep: "no",
-      hydration: "yes",
+      "work-on-business": "no",
+      "business-plan": "no",
+      "monthly-pl": "yes",
     });
-    expect(r.weaknesses.map((w) => w.id)).toEqual(["sleep", "support"]);
+    expect(r.weaknesses.map((w) => w.id)).toEqual(["business-plan", "work-on-business"]);
     expect(r.weaknesses[0]).toEqual({
-      id: "sleep",
+      id: "business-plan",
       question: questions[0].text,
       impact: questions[0].impact,
     });
-    expect(r.weaknesses.map((w) => w.id)).not.toContain("hydration");
+    expect(r.weaknesses.map((w) => w.id)).not.toContain("monthly-pl");
     expect(r.score).toBe(8);
   });
 

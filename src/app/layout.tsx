@@ -10,8 +10,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Owner Health Check",
-  description: "Ten quick yes/no questions about your health as a business owner.",
+  title: "Business Health Check",
+  description: "Ten quick yes/no questions on the foundations of your business.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -38,8 +38,8 @@ describe("useHealthCheck", () => {
     act(() => result.current.start());
     act(() => result.current.answer("no"));
     expect(result.current.index).toBe(1);
-    expect(result.current.answers).toEqual({ sleep: "no" });
-    expect(loadAnswers()).toEqual({ sleep: "no" });
+    expect(result.current.answers).toEqual({ "business-plan": "no" });
+    expect(loadAnswers()).toEqual({ "business-plan": "no" });
   });
 
   it("last answer produces the report", () => {
@@ -50,7 +50,7 @@ describe("useHealthCheck", () => {
     }
     expect(result.current.status).toBe("report");
     expect(result.current.report?.score).toBe(9);
-    expect(result.current.report?.weaknesses.map((w) => w.id)).toEqual(["sleep"]);
+    expect(result.current.report?.weaknesses.map((w) => w.id)).toEqual(["business-plan"]);
   });
 
   it("back goes to the previous question keeping answers, and answers can change", () => {
@@ -59,9 +59,9 @@ describe("useHealthCheck", () => {
     act(() => result.current.answer("yes"));
     act(() => result.current.back());
     expect(result.current.index).toBe(0);
-    expect(result.current.answers).toEqual({ sleep: "yes" });
+    expect(result.current.answers).toEqual({ "business-plan": "yes" });
     act(() => result.current.answer("no"));
-    expect(result.current.answers).toEqual({ sleep: "no" });
+    expect(result.current.answers).toEqual({ "business-plan": "no" });
     expect(result.current.index).toBe(1);
   });
 
@@ -83,11 +83,11 @@ describe("useHealthCheck", () => {
   });
 
   it("resumes at the first unanswered question after reload", () => {
-    saveAnswers({ sleep: "yes", exercise: "no" });
+    saveAnswers({ "business-plan": "yes", "break-even": "no" });
     const { result } = renderHook(() => useHealthCheck());
     expect(result.current.status).toBe("question");
     expect(result.current.index).toBe(2);
-    expect(result.current.answers).toEqual({ sleep: "yes", exercise: "no" });
+    expect(result.current.answers).toEqual({ "business-plan": "yes", "break-even": "no" });
   });
 
   it("lands on the report when fully answered", () => {

@@ -4,13 +4,13 @@ const KEY = "health-check:v1";
 
 describe("storage", () => {
   it("round-trips answers", () => {
-    saveAnswers({ sleep: "yes", support: "no" });
-    expect(loadAnswers()).toEqual({ sleep: "yes", support: "no" });
+    saveAnswers({ "business-plan": "yes", "work-on-business": "no" });
+    expect(loadAnswers()).toEqual({ "business-plan": "yes", "work-on-business": "no" });
   });
 
   it("uses the v1 key", () => {
-    saveAnswers({ sleep: "no" });
-    expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({ sleep: "no" });
+    saveAnswers({ "business-plan": "no" });
+    expect(JSON.parse(localStorage.getItem(KEY)!)).toEqual({ "business-plan": "no" });
   });
 
   it("returns {} when empty", () => {
@@ -30,13 +30,13 @@ describe("storage", () => {
   it("filters unknown ids and invalid values", () => {
     localStorage.setItem(
       KEY,
-      JSON.stringify({ sleep: "yes", bogus: "no", exercise: "maybe", stress: 1 }),
+      JSON.stringify({ "business-plan": "yes", bogus: "no", "break-even": "maybe", processes: 1 }),
     );
-    expect(loadAnswers()).toEqual({ sleep: "yes" });
+    expect(loadAnswers()).toEqual({ "business-plan": "yes" });
   });
 
   it("clearAnswers removes saved data", () => {
-    saveAnswers({ sleep: "yes" });
+    saveAnswers({ "business-plan": "yes" });
     clearAnswers();
     expect(localStorage.getItem(KEY)).toBeNull();
     expect(loadAnswers()).toEqual({});
@@ -48,7 +48,7 @@ describe("storage", () => {
     it("is safe to call", () => {
       vi.stubGlobal("window", undefined);
       expect(loadAnswers()).toEqual({});
-      expect(() => saveAnswers({ sleep: "yes" })).not.toThrow();
+      expect(() => saveAnswers({ "business-plan": "yes" })).not.toThrow();
       expect(() => clearAnswers()).not.toThrow();
     });
   });

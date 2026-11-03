@@ -1,8 +1,8 @@
 export function Intro({ onStart }: { onStart: () => void }) {
   return (
     <section className="animate-rise-in">
-      <p className="text-sm font-medium text-primary">Health Check · Area 1</p>
-      <h1 className="mt-2 text-3xl font-bold sm:text-4xl">How healthy are your habits?</h1>
+      <p className="text-sm font-medium text-primary">Business Health Check · Area 1</p>
+      <h1 className="mt-2 text-3xl font-bold sm:text-4xl">How healthy is your business?</h1>
       <p className="mt-3 text-muted">10 quick yes/no questions. Takes about a minute.</p>
       <button
         type="button"

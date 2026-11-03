@@ -1,4 +1,4 @@
-# Slices — Owner Health Check
+# Slices — Business Health Check
 
 PRD: `prd.md` · Design: `design.md`
 

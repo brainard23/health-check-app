@@ -3,63 +3,63 @@ export type Question = { id: string; text: string; impact: string };
 
 export const questions: Question[] = [
   {
-    id: "sleep",
-    text: "Do you sleep at least 7 hours most nights?",
+    id: "business-plan",
+    text: "Do you have a written business plan with clear goals for the next 12 months?",
     impact:
-      "Short sleep dulls focus and judgement, leading to slower and costlier business decisions.",
+      "Without clear goals, your time and money go to whatever feels urgent rather than what actually grows the business.",
   },
   {
-    id: "exercise",
-    text: "Do you exercise at least 3 times a week?",
+    id: "break-even",
+    text: "Do you know your monthly break-even point (the sales needed to cover all costs)?",
     impact:
-      "Low physical activity drains your energy and stamina, reducing how much you get done each workday.",
+      "Without knowing your break-even point, you can't tell if the business is really making money until it's too late to fix.",
   },
   {
-    id: "nutrition",
-    text: "Do you eat regular, balanced meals during work days?",
+    id: "separate-finances",
+    text: "Do you keep business and personal finances in separate bank accounts?",
     impact:
-      "Skipped or poor meals cause energy crashes that hurt your concentration during key meetings and tasks.",
+      "Mixing finances hides your true profit, complicates taxes, and puts your personal assets at risk.",
   },
   {
-    id: "hydration",
-    text: "Do you drink enough water throughout the day?",
+    id: "monthly-pl",
+    text: "Do you review your profit and loss figures at least once a month?",
     impact:
-      "Even mild dehydration causes fatigue and headaches that quietly cut your productivity.",
+      "Without regular reviews, rising costs and falling margins go unnoticed until they become a cash crisis.",
   },
   {
-    id: "rest-day",
-    text: "Do you take at least one full day off work each week?",
+    id: "cash-reserve",
+    text: "Do you have at least 3 months of operating expenses saved as a cash reserve?",
     impact:
-      "Without real rest you head toward burnout, which can stall the whole business when you are its driving force.",
+      "Without a cash buffer, one slow month or late-paying client can force you into debt or closure.",
   },
   {
-    id: "checkup",
-    text: "Do you have a regular health check-up with a doctor each year?",
+    id: "ideal-customer",
+    text: "Do you clearly know who your ideal customer is?",
     impact:
-      "Undetected health problems can turn into long absences that leave the business without its leader.",
+      "Without a clear target customer, your marketing reaches the wrong people and wastes money.",
   },
   {
-    id: "stress",
-    text: "Do you manage stress in a healthy way (not through alcohol, smoking, or overeating)?",
+    id: "processes",
+    text: "Do you have documented processes for your key business tasks?",
     impact:
-      "Unhealthy coping wears down your health and temper, straining relationships with staff and clients.",
+      "Without written processes, the business depends on you for everything and can't run or grow without you.",
   },
   {
-    id: "breaks",
-    text: "Do you take short breaks during long work sessions?",
+    id: "runs-without-you",
+    text: "Could the business run for two weeks without you being there?",
     impact:
-      "Working nonstop lowers the quality of your work and raises the risk of costly mistakes.",
+      "If the business stops when you step away, you have bought yourself a job, not built a business you can grow or sell.",
   },
   {
-    id: "switch-off",
-    text: "Do you limit work screen time in the evening so you can switch off?",
+    id: "legal-protection",
+    text: "Do you have the right business licenses, insurance and contracts in place?",
     impact:
-      "Never switching off keeps you mentally tired, leaving less creativity and clear thinking for growing the business.",
+      "Gaps in legal protection leave you open to fines, lawsuits and losses that could wipe out years of work.",
   },
   {
-    id: "support",
-    text: "Do you have someone to talk to when work feels overwhelming?",
+    id: "work-on-business",
+    text: "Do you set aside time each week to work on the business, not just in it?",
     impact:
-      "Carrying pressure alone makes problems feel bigger and slows down how quickly you find solutions.",
+      "When all your time goes to daily tasks, there's none left for planning and improvements, so the business stays stuck.",
   },
 ];
